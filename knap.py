@@ -51,7 +51,7 @@ max_space = 15
 
 final_value, packed_items = pack_bag_perfectly(item_sizes, item_prices, max_space)
 
-print(f"🏆 Absolute Perfect Value: {final_value}")
-print(f"📦 Items packed:")
+print(f" Absolute Perfect Value: {final_value}")
+print(f" Items packed:")
 for item in packed_items:
     print(f"  -> Size: {item['size']}, Price: {item['price']}")
