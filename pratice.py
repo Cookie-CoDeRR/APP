@@ -1,29 +1,10 @@
-# i = 10
-# for i in range(10, 0, -1):
-#     print(i)
+def tab(n):
+    table = [0]*(n+1)
 
-# a = 6/(2*3)
-# print(4%11)
+    table[0]=0
+    table[1]=1
 
-# x = int(input())
-# y = int(input())
-
-# x = x % y
-# print(x)
-# x = x % y
-# print(x)
-# y = y % x
-
-# print(y)
-
-# print(1//2)
-
-import string
-
-
-class String:
-    def __init__(self, string):
-        self.string = string
-        
-    def __add__(self, other):
-        return self.string + other.string
+    for i in range(2,n+1):
+        table[i]=table[i-1]+table[i-2]
+    return table[n]
+print(tab(5))
